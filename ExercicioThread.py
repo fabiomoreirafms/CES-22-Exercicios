@@ -6,7 +6,7 @@ class queue(object):
     lock = threading.RLock()
     def __init__(self):
         self.item = -1
-
+    
     def add(self, n):
         self.lock.acquire()
         self.item = n
