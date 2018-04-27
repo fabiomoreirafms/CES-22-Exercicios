@@ -34,7 +34,8 @@ def consumer(queue, index):
         item = queue.remove()
         if item>=0:
             print ("Consumer notify: {0} retirado por {1}".format(item, index))
-        inputs-=1
+            inputs -= 1
+        time.sleep(0.5)
 
 if __name__=="__main__":
     inputs = 10
